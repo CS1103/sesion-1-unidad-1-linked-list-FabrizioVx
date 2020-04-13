@@ -111,17 +111,6 @@ namespace utec{
 
         template<typename T>
         LinkedList<T> &LinkedList<T>::operator=(const LinkedList<T> &other) {
-            /*LinkedList<T> aux(other);
-            std::swap(aux.head_, head_);*/
-            /*size_ = other.size_;
-            if(this == &other)
-                return *this;
-            for (type_u i = 0; i < this->size_; ++i) {
-                pop_back();
-            }
-            for (type_u i = 0; i < other.size_ ; ++i) {
-                push_back(other.item(i));
-            }*/
             if(this == &other) return *this;
             size_ = other.size_;
             this->~LinkedList<T>();
@@ -145,6 +134,7 @@ namespace utec{
 
         template<typename T>
         LinkedList<T> &LinkedList<T>::operator=(LinkedList<T> &&other) noexcept{
+            //error
             return *this;
         }
 
@@ -177,7 +167,7 @@ namespace utec{
 
         template<typename T>
         void LinkedList<T>::insert(LinkedList::type_u index, T VALUE) {
-            auto current = new node_t<T>{VALUE,head_};          // el agregar el value no entendi
+            auto current = new node_t<T>{VALUE,head_};
             auto store = new nodo{};
 
             for (type_u i = 0; i < index ; ++i) {
