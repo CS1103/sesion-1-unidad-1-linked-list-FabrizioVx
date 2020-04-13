@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/LinkedList/LinkedList.hpp
+/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/sesion-1-unidad-1-linked-list-FabrizioVx/src/LinkedList.hpp
 cctype
 -
 ostream
@@ -18,11 +18,11 @@ utility
 vector
 -
 
-/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/LinkedList/main.cpp
+/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/sesion-1-unidad-1-linked-list-FabrizioVx/src/main.cpp
 iostream
 -
 string
 -
 LinkedList.hpp
-/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/LinkedList/LinkedList.hpp
+/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/sesion-1-unidad-1-linked-list-FabrizioVx/src/LinkedList.hpp
 

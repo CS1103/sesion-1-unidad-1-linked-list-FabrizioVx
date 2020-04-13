@@ -1,3 +1,3 @@
-/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/LinkedList/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/LinkedList/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir
+/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/sesion-1-unidad-1-linked-list-FabrizioVx/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/sesion-1-unidad-1-linked-list-FabrizioVx/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Fabrizio/CLionProjects/Poo2/Semana1/EJERCICIO_GIT_HUB_LINKED_LIST/sesion-1-unidad-1-linked-list-FabrizioVx/src/cmake-build-debug/CMakeFiles/LinkedList.dir

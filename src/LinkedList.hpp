@@ -32,8 +32,9 @@ namespace utec{
         private:
             typedef size_t type_u;
             typedef node_t<T>* node;
-            node_t<T>* head_ = nullptr;
-            node_t<T>* tail_ = nullptr;
+            typedef node_t<T> nodo;
+            node head_ = nullptr;
+            node tail_ = nullptr;
             type_u size_ = 0;
 
         public:
@@ -47,7 +48,7 @@ namespace utec{
             T getValue();
 
             friend ostream &operator<<(ostream& os, LinkedList &other){
-                while (other.head_ != nullptr) {
+                while (other.head_ != nullptr && !other.empty()) {
                         os << other.head_->value << " - ";
                         other.head_ = other.head_->next_;
                         if(other.head_ == nullptr){
@@ -88,8 +89,8 @@ namespace utec{
 
         template<typename T>
         LinkedList<T>::~LinkedList() {
-            for(node_t<T>* c = head_; c != nullptr; ){
-                node_t<T>* p = c;
+            for(node c = head_; c != nullptr; ){
+                node p = c;
                 c = c->next_;
                 delete p;
             }
@@ -158,14 +159,14 @@ namespace utec{
              * auto node = new node_t<T>{value,head_};  AQUI NODE APUNTA AL TAIL O NODO POSTERIOR
              * head_ = node;        AQUI EL HEAD_ APUNTA A NODE(NUEVO NODO) Y ESE ULTIMO YA ESTA APUNTANDO AL TAIL
              * */
-            head_ = new node_t<T>{VALUE,head_};     //SE CREA UN NODO Y EL HEAD APUNTA A NODE A TAIL YA HAY DOS NODOS
+            head_ = new nodo{VALUE,head_};     //SE CREA UN NODO Y EL HEAD APUNTA A NODE A TAIL YA HAY DOS NODOS
             if(tail_ == nullptr)
                 tail_ = head_;
             size_++;
         }
         template<typename T>
         void LinkedList<T>::push_back(T VALUE) {
-            auto last = new node_t<T>{ VALUE, nullptr };
+            auto last = new nodo{ VALUE, nullptr };
             auto current = head_;
             if (head_ == nullptr)head_ = last;
             while (current->next_ != nullptr)
@@ -177,12 +178,12 @@ namespace utec{
         template<typename T>
         void LinkedList<T>::insert(LinkedList::type_u index, T VALUE) {
             auto current = new node_t<T>{VALUE,head_};          // el agregar el value no entendi
-            auto store = new node_t<T>{};
+            auto store = new nodo{};
 
-            for (size_t i = 0; i < index ; ++i) {
+            for (type_u i = 0; i < index ; ++i) {
                 current = current->next_;
             }
-            auto p_node = new node_t<T>{VALUE,current};
+            auto p_node = new nodo{VALUE,current};
             store->next_ = current->next_;
             current->next_ = p_node;
             p_node->next_ = store->next_;
@@ -205,7 +206,7 @@ namespace utec{
 
         template<typename T>
         void LinkedList<T>::pop_back() {
-            auto aux = new node_t<T>{0,head_};
+            auto aux = new nodo{0,head_};
             if(head_ == tail_){
                 delete tail_;
                 head_ = tail_ = nullptr;
@@ -232,9 +233,9 @@ namespace utec{
 
         template<typename T>
         void LinkedList<T>::erase(LinkedList::type_u pos, T VALUE) {
-            auto target = new node_t<T>{VALUE,head_};
-            auto store = new node_t<T>{};
-            auto prev = new node_t<T>{VALUE,head_};
+            auto target = new nodo{VALUE,head_};
+            auto store = new nodo{};
+            auto prev = new nodo{VALUE,head_};
 
             for (type_u i = 0; i <= pos ; ++i) {
                 target = target->next_;
