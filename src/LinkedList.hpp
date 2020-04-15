@@ -156,12 +156,17 @@ namespace utec{
         }
         template<typename T>
         void LinkedList<T>::push_back(T VALUE) {
-            auto last = new nodo{ VALUE, nullptr };
-            auto current = head_;
-            if (head_ == nullptr)head_ = last;
-            while (current->next_ != nullptr)
-                current = current->next_;
-            current->next_ = last;
+            node_t<T>* new_node_push = new node_t<T>;
+            new_node_push->next_= nullptr;
+            new_node_push->value = VALUE;
+
+            if(tail_ == nullptr){
+                tail_ = new_node_push;
+            }else{
+                tail_->next_ = new_node_push;
+                tail_ = new_node_push;
+            }
+
             size_++;
         }
 
